@@ -18,7 +18,7 @@ $tns = "
 	)
 ";
 $url = "oci:dbname=".$tns.";charset=utf8";
-$username = 'd202002583';
+$username = 'd';
 $password = '1234';
 try {
   $conn = new PDO($dsn, $username, $password);
