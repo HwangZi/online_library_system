@@ -11,7 +11,7 @@ $tns = "
 	)
 ";
 $url = "oci:dbname=".$tns.";charset=utf8";
-$username = 'd202002583';
+$username = 'd';
 $password = '1234';
 
 try {
@@ -56,10 +56,10 @@ try {
                 <th>책번호</th>
                 <th>제목</th>
                 <th>대출일</th>
-				<th>반납기한일</th>
-				<th>연장횟수</th>
-				<th>연장</th>
-				<th>반납</th>
+		<th>반납기한일</th>
+		<th>연장횟수</th>
+		<th>연장</th>
+		<th>반납</th>
             </tr>
         </thead>
 <tbody>	
@@ -75,29 +75,28 @@ $stmt -> execute();
 while ($row = $stmt -> fetch(PDO::FETCH_ASSOC)) {
 ?>
             <tr>
-				<td>
-                    <?= $row['ISBN'] ?>
+		<td>
+			<?= $row['ISBN'] ?>
                 </td>
                 <td>
-					<?= $row['TITLE'] ?>
+			<?= $row['TITLE'] ?>
                 </td>
                 <td>
-                    <?= $row['DATERENTED'] ?>
+                	<?= $row['DATERENTED'] ?>
                 </td>
-				<td>
-                    <?= $row['DATEDUE'] ?>
+		<td>
+                	<?= $row['DATEDUE'] ?>
                 </td>
-				<td>
-                    <?= $row['EXTTIMES'] ?>
+		<td>
+                	<?= $row['EXTTIMES'] ?>
                 </td>
-				<td>
-                    <a href="extend_book.php?bookIsbn=<?= $row['ISBN'] ?>">연장</a>
+		<td>
+                	<a href="extend_book.php?bookIsbn=<?= $row['ISBN'] ?>">연장</a>
                 </td>
-				<td>
-                    <a href="return_book.php?bookIsbn=<?= $row['ISBN'] ?>">반납</a>
+		<td>
+                	<a href="return_book.php?bookIsbn=<?= $row['ISBN'] ?>">반납</a>
                 </td>
-				
-                
+		
             </tr>
 <?php
 }
