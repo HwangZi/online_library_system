@@ -63,14 +63,14 @@ $stmt -> execute();
 while ($row = $stmt -> fetch(PDO::FETCH_ASSOC)) {
 ?>
             <tr>
-				<td>
-                    <?= $row['ISBN'] ?>
+		<td>
+                	<?= $row['ISBN'] ?>
                 </td>
                 <td>
-					<a href="bookview.php?bookIsbn=<?= $row['ISBN'] ?>"><?= $row['TITLE'] ?></a>
+			<a href="bookview.php?bookIsbn=<?= $row['ISBN'] ?>"><?= $row['TITLE'] ?></a>
                 </td>
                 <td>
-                    <?= $row['PUBLISHER'] ?>
+                	<?= $row['PUBLISHER'] ?>
                 </td>
                 
             </tr>
@@ -103,11 +103,11 @@ $stmt -> execute(array($searchWord_title));
 while ($row = $stmt -> fetch(PDO::FETCH_ASSOC)) {
 ?>
             <tr>
-				<td>
+		<td>
                     <?= $row['ISBN'] ?>
                 </td>
                 <td>
-					<a href="bookview.php?bookIsbn=<?= $row['ISBN'] ?>"><?= $row['TITLE'] ?></a>
+			<a href="bookview.php?bookIsbn=<?= $row['ISBN'] ?>"><?= $row['TITLE'] ?></a>
                 </td>
                 <td>
                     <?= $row['PUBLISHER'] ?>
@@ -147,11 +147,11 @@ $stmt -> execute(array($searchWord_publisher));
 while ($row = $stmt -> fetch(PDO::FETCH_ASSOC)) {
 ?>
             <tr>
-				<td>
+		<td>
                     <?= $row['ISBN'] ?>
                 </td>
                 <td>
-					<a href="bookview.php?bookIsbn=<?= $row['ISBN'] ?>"><?= $row['TITLE'] ?></a>
+			<a href="bookview.php?bookIsbn=<?= $row['ISBN'] ?>"><?= $row['TITLE'] ?></a>
                 </td>
                 <td>
                     <?= $row['PUBLISHER'] ?>
