@@ -28,7 +28,7 @@
                 <th>책번호</th>
                 <th>제목</th>
                 <th>예약자</th>
-				<th>예약일시</th>
+		<th>예약일시</th>
             </tr>
         </thead>
         <tbody>
@@ -47,7 +47,7 @@ $tns = "
 	)
 ";
 $url = "oci:dbname=".$tns.";charset=utf8";
-$username = 'd202002583';
+$username = 'd';
 $password = '1234';
 
 try {
@@ -66,17 +66,17 @@ $stmt4 -> execute();
 while ($row4 = $stmt4 -> fetch(PDO::FETCH_ASSOC)) {
 ?>
             <tr>
-				<td>
-                    <?= $row4['ISBN'] ?>
+		<td>
+                	<?= $row4['ISBN'] ?>
                 </td>
                 <td>
-					<?= $row4['TITLE'] ?>
+			<?= $row4['TITLE'] ?>
                 </td>
                 <td>
-                    <?= $row4['CNO'] ?>
+			<?= $row4['CNO'] ?>
                 </td>
-				<td>
-                    <?= $row4['DATETIME'] ?>
+		<td>
+                	<?= $row4['DATETIME'] ?>
                 </td>
                 
             </tr>
