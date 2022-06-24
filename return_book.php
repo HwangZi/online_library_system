@@ -34,6 +34,9 @@ $stmt1 -> execute();
 $stmt2 = $conn -> prepare("UPDATE PREVIOUSRENTAL SET DATERETURNED=SYSDATE WHERE ISBN=$bookIsbn AND CNO=$userid");
 $stmt2 -> execute();
 
+/* 대기자 순번별로 이메일 전송 위한 sql문(실제 이메일 전송은 구현x) 
+$stmt3 = $conn -> prepare("SELECT * FROM (SELECT * FROM RESERVE WHERE ISBN=$bookIsbn ORDER BY DATETIME ASC) WHERE ROWNUM = 1");
+*/
 
 
 echo "<script>alert('반납되었습니다.'); location.href='./return_books.php';</script>";
